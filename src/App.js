@@ -1,11 +1,15 @@
 import React from 'react';
-import './App.css';
+import Header from './components/Header/Header';
+import NotificationForm from "./components/NotificationForm/NotificationForm";
+import { GlobalStyles } from "./components/StyledComponents/GlobalStyles";
 
 function App() {
   return (
-    <div>
-			<p>Hello</p>
-    </div>
+		<div>
+			<GlobalStyles />
+			<Header />
+			<NotificationForm />
+		</div>
   );
 }
 
