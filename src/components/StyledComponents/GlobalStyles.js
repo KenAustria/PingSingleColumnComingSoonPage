@@ -31,4 +31,22 @@ const GlobalStyles = createGlobalStyle`
 	}
 `;
 
-export {GlobalStyles}
+const Heading = styled.h1`
+	font-weight: 300;
+	font-size: 2.83rem;
+	margin: 0;
+	margin-top: .9em;
+	strong {
+		color: var(--darkblue);
+	}
+`
+
+const Paragraph = styled.p`
+	font-size: inherit;
+`
+
+export {
+	GlobalStyles,
+	Heading,
+	Paragraph
+}

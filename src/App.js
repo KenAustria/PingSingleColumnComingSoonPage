@@ -5,11 +5,11 @@ import { GlobalStyles } from "./components/StyledComponents/GlobalStyles";
 
 function App() {
   return (
-		<div>
+		<main className="app__container">
 			<GlobalStyles />
 			<Header />
 			<NotificationForm />
-		</div>
+		</main>
   );
 }
 
