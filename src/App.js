@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header/Header';
-import NotificationForm from "./components/NotificationForm/NotificationForm";
+import EmailForm from "./components/EmailForm/EmailForm";
 import { GlobalStyles } from "./components/StyledComponents/GlobalStyles";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 		<main className="app__container">
 			<GlobalStyles />
 			<Header />
-			<NotificationForm />
+			<EmailForm />
 		</main>
   );
 }
