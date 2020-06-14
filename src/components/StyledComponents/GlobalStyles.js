@@ -45,13 +45,20 @@ const Button = styled.button`
 
 	&:hover {
 		cursor: pointer;
-		background: var(--darkblue);
+		background: white;
+		color: var(--darkblue);
 	}
 
 	@media (min-width: 600px) {
 		width: 30%;
 		align-self: flex-start;
 	}
+`
+
+const Copyright = styled.p`
+	color: var(--paleblue);
+	font-size: 1.5rem;
+	display: block;
 `
 
 const EmailInput = styled.input`
@@ -61,6 +68,37 @@ const EmailInput = styled.input`
 	width: 100%;
 	outline: none;
 	color: var(--darkblue);
+`
+
+const StyledFooter = styled.footer`
+	display: flex;
+	justify-content: center;
+	margin: 5em 0 1em;
+
+	button {
+		border: none;
+		outline: none;
+		border: 1px solid var(--paleblue);
+		border-radius: 100%;
+		padding: 0.5em;
+		background: white;
+		font-size: 1.5rem;
+		color: var(--blue);
+		line-height: 0;
+		cursor: pointer;
+		transition: all .5s;
+		margin-left: 15px;
+
+		&:hover {
+			color: white;
+			background: var(--blue);
+			transform: rotate(360deg);
+		}
+
+		button + button {
+			margin-left: 10px;
+		}
+	}
 `
 
 const FormField = styled.div`
@@ -97,10 +135,12 @@ const Paragraph = styled.p`
 
 export {
 	Button,
+	Copyright,
+	EmailInput,
+	StyledFooter,
 	FormField,
 	FormFieldWrapper,
 	GlobalStyles,
 	Heading,
-	EmailInput,
 	Paragraph
 }
