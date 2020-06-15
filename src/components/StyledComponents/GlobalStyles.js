@@ -42,6 +42,7 @@ const Button = styled.button`
 	font-weight: bold;
 	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
 	margin-bottom: 20px;
+	font-size: .8rem;
 
 	&:hover {
 		cursor: pointer;
@@ -68,6 +69,7 @@ const EmailInput = styled.input`
 	width: 100%;
 	outline: none;
 	color: var(--darkblue);
+	font-size: .8rem;
 `
 
 const StyledFooter = styled.footer`

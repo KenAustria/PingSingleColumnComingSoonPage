@@ -1,8 +1,16 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
+import AppContext from "../../store/store";
 import {Button, EmailInput, FormField, FormFieldWrapper} from "../StyledComponents/GlobalStyles";
 
 const EmailForm = () => {
-	const [email, setEmail] = useState("");
+	const [{email, submitted}, dispatch] = useContext(AppContext);
+
+	function onChange({target: {value}}) {
+		dispatch({
+			type: "change",
+			payload: {name: "email", value}
+		})
+	}
 
 	return (
 		<FormFieldWrapper>
@@ -11,10 +19,10 @@ const EmailForm = () => {
 					value={email}
 					aria-label="email"
 					placeholder="Your email address.."
-					onChange={event => setEmail(event.target.value)}
+					onChange={onChange}
 				/>
 			</FormField>
-			<Button onChange={event => setEmail(event.target.vaule)}>Notify Me</Button>
+			<Button>Notify Me</Button>
 		</FormFieldWrapper>
 	)
 }
